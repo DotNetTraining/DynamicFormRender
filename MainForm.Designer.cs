@@ -117,6 +117,13 @@ namespace DynamicFormRender
             this.Name = "MainForm";
             this.ResumeLayout(false);
 
+            var form1 = new Form1();
+            form1.TopLevel = false;
+            form1.FormBorderStyle = FormBorderStyle.None;
+            form1.ControlBox = false;
+            form1.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form1);
+            form1.Show();
         }
         #endregion
 
