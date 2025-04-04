@@ -20,8 +20,6 @@ namespace DynamicFormRender
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        public List<FormRenderFrom> formRenderValues = new List<FormRenderFrom>();
-
         private ChromiumWebBrowser chromeBrowser;
 
         /// <summary>
@@ -47,6 +45,17 @@ namespace DynamicFormRender
             };
 
             panel1.Controls.Add(chromeBrowser);
+        }
+
+        private void InitializeFormRenderValues()
+        {
+            // Initialize formRenderValues here
+            formRenderValues = new List<FormRenderFrom>()
+                {
+                    new FormRenderFrom { FormName = "Form1", RenderFrom = 0 },
+                    new FormRenderFrom { FormName = "Form2", RenderFrom = 0 },
+                    new FormRenderFrom { FormName = "Form3", RenderFrom = 1 }
+                };
         }
 
         /// <summary>
@@ -109,12 +118,6 @@ namespace DynamicFormRender
             this.Name = "MainForm";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            var form1 = new Form1();
-            form1.TopLevel = false;
-            form1.Dock = DockStyle.Fill;
-            panel1.Controls.Add(form1);
-            form1.Show();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -122,7 +125,7 @@ namespace DynamicFormRender
             int renderFrom = formRenderValues.FirstOrDefault(x => x.FormName == "Form1").RenderFrom;
             // Clear any existing controls inside the panel
             panel1.Controls.Clear();
-            
+
             if (renderFrom == 0)
             {
                 // Create a new instance of Form1 and set it to dock inside the panel

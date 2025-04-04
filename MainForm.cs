@@ -12,9 +12,11 @@ namespace DynamicFormRender
 {
     public partial class MainForm : Form
     {
+        public List<FormRenderFrom> formRenderValues = new List<FormRenderFrom>();
         public MainForm()
         {
             InitializeComponent();
+            InitializeFormRenderValues();
         }
     }
 }
