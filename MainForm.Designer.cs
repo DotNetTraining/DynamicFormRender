@@ -54,7 +54,7 @@ namespace DynamicFormRender
                 {
                     new FormRenderFrom { FormName = "Form1", RenderFrom = 0 },
                     new FormRenderFrom { FormName = "Form2", RenderFrom = 0 },
-                    new FormRenderFrom { FormName = "Form3", RenderFrom = 1 }
+                    new FormRenderFrom { FormName = "Form3", RenderFrom = 0 }
                 };
         }
 
@@ -68,45 +68,44 @@ namespace DynamicFormRender
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(6, 1);
+            this.panel1.Location = new System.Drawing.Point(6, 65);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 337);
+            this.panel1.Size = new System.Drawing.Size(907, 349);
             this.panel1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(222, 362);
+            this.button1.Location = new System.Drawing.Point(28, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
+            this.button1.Size = new System.Drawing.Size(187, 31);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Purchase Order Entry";
             this.button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(435, 362);
+            this.button2.Location = new System.Drawing.Point(233, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 31);
+            this.button2.Size = new System.Drawing.Size(146, 31);
             this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
+            this.button2.Text = "SmartPO Import";
             this.button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(666, 362);
+            this.button3.Location = new System.Drawing.Point(401, 12);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
+            this.button3.Size = new System.Drawing.Size(217, 31);
             this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
+            this.button3.Text = "Purchase Order Reports";
             this.button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // MainForm
             // 
@@ -116,64 +115,8 @@ namespace DynamicFormRender
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            int renderFrom = formRenderValues.FirstOrDefault(x => x.FormName == "Form1").RenderFrom;
-            // Clear any existing controls inside the panel
-            panel1.Controls.Clear();
-
-            if (renderFrom == 0)
-            {
-                // Create a new instance of Form1 and set it to dock inside the panel
-                var form1 = new Form1();
-                form1.TopLevel = false;
-                form1.Dock = DockStyle.Fill;
-                panel1.Controls.Add(form1);
-                form1.Show();
-            }
-            else
-            {
-                InitializeCefSharpBrowser();
-                chromeBrowser.Load("http://localhost:5173/");
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // Clear any existing controls inside the panel
-            panel1.Controls.Clear();
-
-            // Create a new instance of Form2 and set it to dock inside the panel
-            var form2 = new Form2();
-            form2.TopLevel = false;
-            form2.Dock = DockStyle.Fill;
-            panel1.Controls.Add(form2);
-            form2.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            int renderFrom = formRenderValues.FirstOrDefault(x => x.FormName == "Form3").RenderFrom;
-            // Clear any existing controls inside the panel
-            panel1.Controls.Clear();
-            if (renderFrom == 0)
-            {
-                // Create a new instance of Form2 and set it to dock inside the panel
-                var form3 = new Form3();
-                form3.TopLevel = false;
-                form3.Dock = DockStyle.Fill;
-                panel1.Controls.Add(form3);
-                form3.Show();
-            }
-            else
-            {
-                InitializeCefSharpBrowser();
-                chromeBrowser.Load("http://localhost:5173/");
-            }
         }
         #endregion
 
