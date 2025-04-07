@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DynamicFormRender
@@ -17,9 +12,10 @@ namespace DynamicFormRender
         {
             InitializeComponent();
             InitializeFormRenderValues();
+            InitializeCefSharpBrowser();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void purchaseOrderEntryMenuItem_Click(object sender, EventArgs e)
         {
             int renderFrom = formRenderValues.FirstOrDefault(x => x.FormName == "Form1").RenderFrom;
             // Clear any existing controls inside the panel
@@ -38,27 +34,36 @@ namespace DynamicFormRender
             }
             else
             {
-                InitializeCefSharpBrowser();
-                chromeBrowser.Load("http://localhost:5173/");
+                //InitializeCefSharpBrowser();
+                chromeBrowser.Load("http://localhost:5173/form1");
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void smartPoImportMenuItem_Click(object sender, EventArgs e)
         {
+            int renderFrom = formRenderValues.FirstOrDefault(x => x.FormName == "Form2").RenderFrom;
             // Clear any existing controls inside the panel
             panel1.Controls.Clear();
 
-            // Create a new instance of Form2 and set it to dock inside the panel
-            var form2 = new Form2();
-            form2.TopLevel = false;
-            form2.FormBorderStyle = FormBorderStyle.None;
-            form2.ControlBox = false;
-            form2.Dock = DockStyle.Fill;
-            panel1.Controls.Add(form2);
-            form2.Show();
+            if (renderFrom == 0)
+            {
+                // Create a new instance of Form2 and set it to dock inside the panel
+                var form2 = new Form2();
+                form2.TopLevel = false;
+                form2.FormBorderStyle = FormBorderStyle.None;
+                form2.ControlBox = false;
+                form2.Dock = DockStyle.Fill;
+                panel1.Controls.Add(form2);
+                form2.Show();
+            }
+            else
+            {
+                //InitializeCefSharpBrowser();
+                chromeBrowser.Load("http://localhost:5173/form2");
+            }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void purchaseOrderReportsMenuItem_Click(object sender, EventArgs e)
         {
             int renderFrom = formRenderValues.FirstOrDefault(x => x.FormName == "Form3").RenderFrom;
             // Clear any existing controls inside the panel
@@ -76,8 +81,8 @@ namespace DynamicFormRender
             }
             else
             {
-                InitializeCefSharpBrowser();
-                chromeBrowser.Load("http://localhost:5173/");
+                //InitializeCefSharpBrowser();
+                chromeBrowser.Load("http://localhost:5173/form3");
             }
         }
     }

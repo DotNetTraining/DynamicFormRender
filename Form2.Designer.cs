@@ -32,6 +32,15 @@ namespace DynamicFormRender
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.OrderType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VendorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Currency = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -42,15 +51,6 @@ namespace DynamicFormRender
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.OrderType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VendorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Currency = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -71,8 +71,83 @@ namespace DynamicFormRender
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(6, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1502, 293);
+            this.panel1.Size = new System.Drawing.Size(1502, 477);
             this.panel1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.OrderType,
+            this.PO,
+            this.Company,
+            this.VendorName,
+            this.Description,
+            this.OrderAmount,
+            this.Currency,
+            this.OrderDate});
+            this.dataGridView1.Location = new System.Drawing.Point(23, 90);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1260, 150);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // OrderType
+            // 
+            this.OrderType.HeaderText = "Order Type";
+            this.OrderType.MinimumWidth = 8;
+            this.OrderType.Name = "OrderType";
+            this.OrderType.Width = 150;
+            // 
+            // PO
+            // 
+            this.PO.HeaderText = "PO#";
+            this.PO.MinimumWidth = 8;
+            this.PO.Name = "PO";
+            this.PO.Width = 150;
+            // 
+            // Company
+            // 
+            this.Company.HeaderText = "Company";
+            this.Company.MinimumWidth = 8;
+            this.Company.Name = "Company";
+            this.Company.Width = 150;
+            // 
+            // VendorName
+            // 
+            this.VendorName.HeaderText = "Vendor Name";
+            this.VendorName.MinimumWidth = 8;
+            this.VendorName.Name = "VendorName";
+            this.VendorName.Width = 150;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.MinimumWidth = 8;
+            this.Description.Name = "Description";
+            this.Description.Width = 150;
+            // 
+            // OrderAmount
+            // 
+            this.OrderAmount.HeaderText = "Order Amount";
+            this.OrderAmount.MinimumWidth = 8;
+            this.OrderAmount.Name = "OrderAmount";
+            this.OrderAmount.Width = 150;
+            // 
+            // Currency
+            // 
+            this.Currency.HeaderText = "Currency";
+            this.Currency.MinimumWidth = 8;
+            this.Currency.Name = "Currency";
+            this.Currency.Width = 150;
+            // 
+            // OrderDate
+            // 
+            this.OrderDate.HeaderText = "Order Date";
+            this.OrderDate.MinimumWidth = 8;
+            this.OrderDate.Name = "OrderDate";
+            this.OrderDate.Width = 150;
             // 
             // textBox5
             // 
@@ -154,86 +229,11 @@ namespace DynamicFormRender
             this.label1.TabIndex = 0;
             this.label1.Text = "Company:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.OrderType,
-            this.PO,
-            this.Company,
-            this.VendorName,
-            this.Description,
-            this.OrderAmount,
-            this.Currency,
-            this.OrderDate});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 90);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1260, 150);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // OrderType
-            // 
-            this.OrderType.HeaderText = "Order Type";
-            this.OrderType.MinimumWidth = 8;
-            this.OrderType.Name = "OrderType";
-            this.OrderType.Width = 150;
-            // 
-            // PO
-            // 
-            this.PO.HeaderText = "PO#";
-            this.PO.MinimumWidth = 8;
-            this.PO.Name = "PO";
-            this.PO.Width = 150;
-            // 
-            // Company
-            // 
-            this.Company.HeaderText = "Company";
-            this.Company.MinimumWidth = 8;
-            this.Company.Name = "Company";
-            this.Company.Width = 150;
-            // 
-            // VendorName
-            // 
-            this.VendorName.HeaderText = "Vendor Name";
-            this.VendorName.MinimumWidth = 8;
-            this.VendorName.Name = "VendorName";
-            this.VendorName.Width = 150;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.MinimumWidth = 8;
-            this.Description.Name = "Description";
-            this.Description.Width = 150;
-            // 
-            // OrderAmount
-            // 
-            this.OrderAmount.HeaderText = "Order Amount";
-            this.OrderAmount.MinimumWidth = 8;
-            this.OrderAmount.Name = "OrderAmount";
-            this.OrderAmount.Width = 150;
-            // 
-            // Currency
-            // 
-            this.Currency.HeaderText = "Currency";
-            this.Currency.MinimumWidth = 8;
-            this.Currency.Name = "Currency";
-            this.Currency.Width = 150;
-            // 
-            // OrderDate
-            // 
-            this.OrderDate.HeaderText = "Order Date";
-            this.OrderDate.MinimumWidth = 8;
-            this.OrderDate.Name = "OrderDate";
-            this.OrderDate.Width = 150;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1454, 492);
+            this.ClientSize = new System.Drawing.Size(1527, 612);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";

@@ -13,6 +13,7 @@ namespace DynamicFormRender
         public string FormName { get; set; }
         public int RenderFrom { get; set; }
     }
+
     partial class MainForm
     {
         /// <summary>
@@ -21,6 +22,10 @@ namespace DynamicFormRender
         private System.ComponentModel.IContainer components = null;
 
         private ChromiumWebBrowser chromeBrowser;
+        private MenuStrip menuStrip;
+        private ToolStripMenuItem purchaseOrderEntryMenuItem;
+        private ToolStripMenuItem smartPoImportMenuItem;
+        private ToolStripMenuItem purchaseOrderReportsMenuItem;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -53,7 +58,7 @@ namespace DynamicFormRender
             formRenderValues = new List<FormRenderFrom>()
                 {
                     new FormRenderFrom { FormName = "Form1", RenderFrom = 0 },
-                    new FormRenderFrom { FormName = "Form2", RenderFrom = 0 },
+                    new FormRenderFrom { FormName = "Form2", RenderFrom = 1 },
                     new FormRenderFrom { FormName = "Form3", RenderFrom = 0 }
                 };
         }
@@ -65,71 +70,71 @@ namespace DynamicFormRender
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.purchaseOrderEntryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.smartPoImportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.purchaseOrderReportsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(6, 65);
+            this.panel1.Location = new System.Drawing.Point(6, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 349);
+            this.panel1.Size = new System.Drawing.Size(1497, 494);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // menuStrip
             // 
-            this.button1.Location = new System.Drawing.Point(28, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 31);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Purchase Order Entry";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.menuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.purchaseOrderEntryMenuItem,
+            this.smartPoImportMenuItem,
+            this.purchaseOrderReportsMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(1515, 33);
+            this.menuStrip.TabIndex = 4;
+            this.menuStrip.Text = "menuStrip";
             // 
-            // button2
+            // purchaseOrderEntryMenuItem
             // 
-            this.button2.Location = new System.Drawing.Point(233, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 31);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "SmartPO Import";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.purchaseOrderEntryMenuItem.Name = "purchaseOrderEntryMenuItem";
+            this.purchaseOrderEntryMenuItem.Size = new System.Drawing.Size(194, 29);
+            this.purchaseOrderEntryMenuItem.Text = "Purchase Order Entry";
+            this.purchaseOrderEntryMenuItem.Click += new System.EventHandler(this.purchaseOrderEntryMenuItem_Click);
             // 
-            // button3
+            // smartPoImportMenuItem
             // 
-            this.button3.Location = new System.Drawing.Point(401, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(217, 31);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Purchase Order Reports";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.smartPoImportMenuItem.Name = "smartPoImportMenuItem";
+            this.smartPoImportMenuItem.Size = new System.Drawing.Size(159, 29);
+            this.smartPoImportMenuItem.Text = "SmartPO Import";
+            this.smartPoImportMenuItem.Click += new System.EventHandler(this.smartPoImportMenuItem_Click);
+            // 
+            // purchaseOrderReportsMenuItem
+            // 
+            this.purchaseOrderReportsMenuItem.Name = "purchaseOrderReportsMenuItem";
+            this.purchaseOrderReportsMenuItem.Size = new System.Drawing.Size(215, 29);
+            this.purchaseOrderReportsMenuItem.Text = "Purchase Order Reports";
+            this.purchaseOrderReportsMenuItem.Click += new System.EventHandler(this.purchaseOrderReportsMenuItem_Click);
             // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(918, 426);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1515, 543);
+            this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.panel1);
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
-            var form1 = new Form1();
-            form1.TopLevel = false;
-            form1.FormBorderStyle = FormBorderStyle.None;
-            form1.ControlBox = false;
-            form1.Dock = DockStyle.Fill;
-            panel1.Controls.Add(form1);
-            form1.Show();
         }
+
         #endregion
 
         private Panel panel1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
     }
 }

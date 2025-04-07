@@ -65,7 +65,7 @@ namespace DynamicFormRender
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(396, 41);
+            this.textBox2.Location = new System.Drawing.Point(573, 41);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(176, 26);
             this.textBox2.TabIndex = 4;
@@ -73,7 +73,7 @@ namespace DynamicFormRender
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(331, 41);
+            this.label3.Location = new System.Drawing.Point(469, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 20);
             this.label3.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace DynamicFormRender
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 41);
+            this.textBox1.Location = new System.Drawing.Point(187, 41);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(167, 26);
             this.textBox1.TabIndex = 2;
@@ -123,14 +123,13 @@ namespace DynamicFormRender
             this.ShowId,
             this.ShowName,
             this.Episode});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1489, 207);
+            this.dataGridView1.Size = new System.Drawing.Size(1489, 233);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.Dock = DockStyle.Fill;
-
             // 
             // ReportId
             // 
@@ -178,7 +177,7 @@ namespace DynamicFormRender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1497, 360);
+            this.ClientSize = new System.Drawing.Size(1519, 621);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
