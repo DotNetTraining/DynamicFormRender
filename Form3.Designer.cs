@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace DynamicFormRender
 {
-    partial class Form3
+    partial class Form3 : Form
     {
         /// <summary>
         /// Required designer variable.

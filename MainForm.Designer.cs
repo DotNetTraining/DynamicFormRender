@@ -1,17 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Windows.Forms;
 using CefSharp.WinForms;
+using Newtonsoft.Json;
 
 namespace DynamicFormRender
 {
     public class FormRenderFrom
     {
         public string FormName { get; set; }
-        public int RenderFrom { get; set; }
+        public RenderFrom RenderFrom { get; set; }
+    }
+
+    public enum RenderFrom
+    {
+        WindowsForm = 0,
+        Cef = 1,
+    }
+
+    public enum RenderFormName
+    {
+        Form1 = 0,
+        Form2 = 1,
+        Form3 = 2
     }
 
     partial class MainForm
@@ -42,25 +57,19 @@ namespace DynamicFormRender
 
         #region Windows Form Designer generated code
 
-        private void InitializeCefSharpBrowser()
-        {
-            chromeBrowser = new ChromiumWebBrowser("http://localhost:5173/")
-            {
-                Dock = DockStyle.Fill,
-            };
-
-            panel1.Controls.Add(chromeBrowser);
-        }
-
         private void InitializeFormRenderValues()
         {
-            // Initialize formRenderValues here
-            formRenderValues = new List<FormRenderFrom>()
-                {
-                    new FormRenderFrom { FormName = "Form1", RenderFrom = 0 },
-                    new FormRenderFrom { FormName = "Form2", RenderFrom = 1 },
-                    new FormRenderFrom { FormName = "Form3", RenderFrom = 0 }
-                };
+            string jsonFilePath = "C:\\POC\\DynamicFormRender\\FormRenderValues.json";
+            formRenderValues = ReadFormRenderValuesFromJson(jsonFilePath);
+        }
+
+        // Method to read and deserialize JSON file into a List<FormRenderFrom>
+        public static List<FormRenderFrom> ReadFormRenderValuesFromJson(string filePath)
+        {
+            string jsonContent = File.ReadAllText(filePath);
+            List<FormRenderFrom> formRenderValues = JsonConvert.DeserializeObject<List<FormRenderFrom>>(jsonContent);
+
+            return formRenderValues;
         }
 
         /// <summary>
