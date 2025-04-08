@@ -63,6 +63,16 @@ namespace DynamicFormRender
             formRenderValues = ReadFormRenderValuesFromJson(jsonFilePath);
         }
 
+        private void InitializeCefSharpBrowser()
+        {
+            chromeBrowser = new ChromiumWebBrowser("http://localhost:5173/")
+            {
+                Dock = DockStyle.Fill,
+            };
+
+            panel1.Controls.Add(chromeBrowser);
+        }
+
         // Method to read and deserialize JSON file into a List<FormRenderFrom>
         public static List<FormRenderFrom> ReadFormRenderValuesFromJson(string filePath)
         {

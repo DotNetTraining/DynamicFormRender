@@ -13,6 +13,7 @@ namespace DynamicFormRender
         {
             InitializeComponent();
             InitializeFormRenderValues();
+            InitializeCefSharpBrowser();
             RenderForm(RenderFormName.Form1.ToString());
         }
        
