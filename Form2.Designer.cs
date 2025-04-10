@@ -71,7 +71,7 @@ namespace DynamicFormRender
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(6, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1502, 477);
+            this.panel1.Size = new System.Drawing.Size(1833, 477);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -86,11 +86,11 @@ namespace DynamicFormRender
             this.OrderAmount,
             this.Currency,
             this.OrderDate});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1260, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(1827, 150);
             this.dataGridView1.TabIndex = 10;
             // 
             // OrderType
@@ -151,35 +151,35 @@ namespace DynamicFormRender
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(1225, 27);
+            this.textBox5.Location = new System.Drawing.Point(1581, 30);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(181, 26);
             this.textBox5.TabIndex = 9;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(908, 30);
+            this.textBox4.Location = new System.Drawing.Point(1191, 32);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(164, 26);
             this.textBox4.TabIndex = 8;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(662, 24);
+            this.textBox3.Location = new System.Drawing.Point(850, 32);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(155, 26);
             this.textBox3.TabIndex = 7;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(385, 29);
+            this.textBox2.Location = new System.Drawing.Point(490, 30);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(159, 26);
             this.textBox2.TabIndex = 6;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 29);
+            this.textBox1.Location = new System.Drawing.Point(144, 30);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 26);
             this.textBox1.TabIndex = 5;
@@ -187,7 +187,7 @@ namespace DynamicFormRender
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1100, 32);
+            this.label5.Location = new System.Drawing.Point(1395, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 20);
             this.label5.TabIndex = 4;
@@ -196,7 +196,7 @@ namespace DynamicFormRender
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(837, 30);
+            this.label4.Location = new System.Drawing.Point(1071, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 3;
@@ -205,7 +205,7 @@ namespace DynamicFormRender
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(565, 30);
+            this.label3.Location = new System.Drawing.Point(706, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 2;
@@ -214,7 +214,7 @@ namespace DynamicFormRender
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(284, 30);
+            this.label2.Location = new System.Drawing.Point(323, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 20);
             this.label2.TabIndex = 1;
@@ -223,7 +223,7 @@ namespace DynamicFormRender
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 30);
+            this.label1.Location = new System.Drawing.Point(6, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 0;
@@ -233,7 +233,7 @@ namespace DynamicFormRender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1527, 612);
+            this.ClientSize = new System.Drawing.Size(1851, 612);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
