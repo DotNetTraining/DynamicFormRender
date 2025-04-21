@@ -40,7 +40,7 @@ namespace DynamicFormRender
             this.Text = "Form2Cef";
 
             // Initialize the ChromiumWebBrowser without parameters
-            chromeBrowser = new ChromiumWebBrowser("http://localhost:5173/") // This is the URL you want to load
+            chromeBrowser = new ChromiumWebBrowser("http://55.55.55.133:8085/") // This is the URL you want to load
             {
                 Dock = DockStyle.Fill, // Make the browser fill the form
             };
@@ -49,7 +49,7 @@ namespace DynamicFormRender
             this.Controls.Add(chromeBrowser);
 
             // Load the specific route/form after the browser is initialized
-            chromeBrowser.Load("http://localhost:5173/form2"); // Load the desired route
+            chromeBrowser.Load("http://55.55.55.133:8085/form2"); // Load the desired route
         }
 
         #endregion

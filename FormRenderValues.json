@@ -9,6 +9,6 @@
     },
     {
         "FormName": "Form3",
-        "RenderFrom": "WindowsForm"
+        "RenderFrom": "Cef"
     }
 ]

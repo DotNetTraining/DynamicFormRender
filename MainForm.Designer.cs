@@ -59,13 +59,16 @@ namespace DynamicFormRender
 
         private void InitializeFormRenderValues()
         {
-            string jsonFilePath = "C:\\POC\\DynamicFormRender\\FormRenderValues.json";
+            //string jsonFilePath = "C:\\POC\\DynamicFormRender\\FormRenderValues.json";
+            string projectRoot = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\.."));
+            string jsonFilePath = Path.Combine(projectRoot, "FormRenderValues.json");
+            //formRenderValues = ReadFormRenderValuesFromJson(relativePath);
             formRenderValues = ReadFormRenderValuesFromJson(jsonFilePath);
         }
 
         private void InitializeCefSharpBrowser()
         {
-            chromeBrowser = new ChromiumWebBrowser("http://localhost:5173/")
+            chromeBrowser = new ChromiumWebBrowser("http://55.55.55.133:8085/")
             {
                 Dock = DockStyle.Fill,
             };
@@ -122,6 +125,8 @@ namespace DynamicFormRender
             this.purchaseOrderEntryMenuItem.Name = "purchaseOrderEntryMenuItem";
             this.purchaseOrderEntryMenuItem.Size = new System.Drawing.Size(194, 29);
             this.purchaseOrderEntryMenuItem.Text = "Purchase Order Entry";
+            this.purchaseOrderEntryMenuItem.ShortcutKeys = Keys.Control | Keys.D1; // Ctrl+1
+            this.purchaseOrderEntryMenuItem.ShowShortcutKeys = true;
             this.purchaseOrderEntryMenuItem.Click += new System.EventHandler(this.purchaseOrderEntryMenuItem_Click);
             // 
             // smartPoImportMenuItem
@@ -129,6 +134,8 @@ namespace DynamicFormRender
             this.smartPoImportMenuItem.Name = "smartPoImportMenuItem";
             this.smartPoImportMenuItem.Size = new System.Drawing.Size(159, 29);
             this.smartPoImportMenuItem.Text = "SmartPO Import";
+            this.smartPoImportMenuItem.ShortcutKeys = Keys.Control | Keys.D2; // Ctrl+2
+            this.smartPoImportMenuItem.ShowShortcutKeys = true;
             this.smartPoImportMenuItem.Click += new System.EventHandler(this.smartPoImportMenuItem_Click);
             // 
             // purchaseOrderReportsMenuItem
@@ -136,6 +143,8 @@ namespace DynamicFormRender
             this.purchaseOrderReportsMenuItem.Name = "purchaseOrderReportsMenuItem";
             this.purchaseOrderReportsMenuItem.Size = new System.Drawing.Size(215, 29);
             this.purchaseOrderReportsMenuItem.Text = "Purchase Order Reports";
+            this.purchaseOrderReportsMenuItem.ShortcutKeys = Keys.Control | Keys.D3; // Ctrl+3
+            this.purchaseOrderReportsMenuItem.ShowShortcutKeys = true;
             this.purchaseOrderReportsMenuItem.Click += new System.EventHandler(this.purchaseOrderReportsMenuItem_Click);
             // 
             // MainForm

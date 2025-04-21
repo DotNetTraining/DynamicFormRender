@@ -39,12 +39,12 @@ namespace DynamicFormRender
             this.ClientSize = new System.Drawing.Size(1535, 703);
             this.Text = "Form3Cef";
 
-            chromeBrowser = new ChromiumWebBrowser("http://localhost:5173/")
+            chromeBrowser = new ChromiumWebBrowser("http://55.55.55.133:8085/")
             {
                 Dock = DockStyle.Fill,
             };
             this.Controls.Add(chromeBrowser);
-            chromeBrowser.Load("http://localhost:5173/form3");
+            chromeBrowser.Load("http://55.55.55.133:8085/form3");
         }
 
         #endregion
